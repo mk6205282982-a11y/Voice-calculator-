@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>AI Voice Calculator</title>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<div class="calculator">
+
+
+    <div class="top-bar">
+        <h1>Voice Calculator</h1>
+
+
+        <select id="language">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">हिन्दी</option>
+        </select>
+    </div>
+
+
+    <!-- Display -->
+    <div class="display-box">
+
+
+        <div id="voiceText">
+            Say something...
+        </div>
+
+
+        <input
+            type="text"
+            id="display"
+            placeholder="0"
+            readonly
+        >
+
+
+    </div>
+
+
+    <!-- Voice controls -->
+    <div class="voice-controls">
+
+
+        <button id="micBtn" onclick="startVoice()">
+            🎙️ Speak
+        </button>
+
+
+        <button onclick="speakResult()">
+            🔊 Speak Result
+        </button>
+
+
+    </div>
+
+
+    <!-- Calculator buttons -->
+
+
+    <div class="buttons">
+
+
+        <button class="danger" onclick="clearDisplay()">AC</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="percentage()">%</button>
+        <button class="operator" onclick="addValue('/')">÷</button>
+
+
+        <button onclick="addValue('7')">7</button>
+        <button onclick="addValue('8')">8</button>
+        <button onclick="addValue('9')">9</button>
+        <button class="operator" onclick="addValue('*')">×</button>
+
+
+        <button onclick="addValue('4')">4</button>
+        <button onclick="addValue('5')">5</button>
+        <button onclick="addValue('6')">6</button>
+        <button class="operator" onclick="addValue('-')">−</button>
+
+
+        <button onclick="addValue('1')">1</button>
+        <button onclick="addValue('2')">2</button>
+        <button onclick="addValue('3')">3</button>
+        <button class="operator" onclick="addValue('+')">+</button>
+
+
+        <button onclick="addValue('0')" class="zero">0</button>
+        <button onclick="addValue('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+
+    </div>
+
+
+    <!-- Scientific buttons -->
+
+
+    <div class="scientific">
+
+
+        <button onclick="square()">x²</button>
+        <button onclick="squareRoot()">√</button>
+        <button onclick="sin()">sin</button>
+        <button onclick="cos()">cos</button>
+        <button onclick="tan()">tan</button>
+
+
+    </div>
+
+
+    <div class="status" id="status">
+        Ready
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

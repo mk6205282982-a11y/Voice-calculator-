@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+
+
+    padding: 20px;
+}
+
+
+.calculator {
+    width: 100%;
+    max-width: 420px;
+
+
+    background: #111827;
+
+
+    padding: 20px;
+
+
+    border-radius: 25px;
+
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.5);
+}
+
+
+/* Top */
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    margin-bottom: 15px;
+}
+
+
+.top-bar h1 {
+    color: white;
+    font-size: 22px;
+}
+
+
+#language {
+    padding: 8px;
+
+
+    border-radius: 8px;
+
+
+    border: none;
+
+
+    background: #374151;
+
+
+    color: white;
+}
+
+
+/* Display */
+
+
+.display-box {
+    background: #020617;
+
+
+    border-radius: 15px;
+
+
+    padding: 15px;
+
+
+    margin-bottom: 15px;
+}
+
+
+#voiceText {
+    color: #9ca3af;
+
+
+    font-size: 14px;
+
+
+    min-height: 22px;
+
+
+    margin-bottom: 8px;
+}
+
+
+#display {
+    width: 100%;
+
+
+    background: transparent;
+
+
+    border: none;
+
+
+    outline: none;
+
+
+    color: white;
+
+
+    text-align: right;
+
+
+    font-size: 35px;
+
+
+    font-weight: bold;
+}
+
+
+/* Voice */
+
+
+.voice-controls {
+    display: grid;
+
+
+    grid-template-columns: 1fr 1fr;
+
+
+    gap: 10px;
+
+
+    margin-bottom: 15px;
+}
+
+
+.voice-controls button {
+    padding: 13px;
+
+
+    border: none;
+
+
+    border-radius: 12px;
+
+
+    background: #2563eb;
+
+
+    color: white;
+
+
+    font-size: 14px;
+
+
+    cursor: pointer;
+}
+
+
+.voice-controls button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Calculator buttons */
+
+
+.buttons {
+    display: grid;
+
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+
+    gap: 10px;
+}
+
+
+.buttons button,
+.scientific button {
+    height: 60px;
+
+
+    border: none;
+
+
+    border-radius: 15px;
+
+
+    background: #374151;
+
+
+    color: white;
+
+
+    font-size: 20px;
+
+
+    cursor: pointer;
+
+
+    transition: 0.15s;
+}
+
+
+.buttons button:hover,
+.scientific button:hover {
+    transform: scale(1.04);
+
+
+    background: #4b5563;
+}
+
+
+.operator {
+    background: #f59e0b !important;
+}
+
+
+.equal {
+    background: #10b981 !important;
+}
+
+
+.danger {
+    background: #ef4444 !important;
+}
+
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* Scientific */
+
+
+.scientific {
+    display: grid;
+
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+
+    gap: 7px;
+
+
+    margin-top: 12px;
+}
+
+
+.scientific button {
+    height: 45px;
+
+
+    font-size: 14px;
+
+
+    background: #1f2937;
+}
+
+
+/* Status */
+
+
+.status {
+    text-align: center;
+
+
+    color: #9ca3af;
+
+
+    margin-top: 15px;
+
+
+    font-size: 13px;
+}
+
+
+/* Mobile */
+
+
+@media (max-width: 450px) {
+
+
+    .calculator {
+        padding: 15px;
+    }
+
+
+    #display {
+        font-size: 30px;
+    }
+
+
+    .buttons button {
+        height: 55px;
+    }
+}
